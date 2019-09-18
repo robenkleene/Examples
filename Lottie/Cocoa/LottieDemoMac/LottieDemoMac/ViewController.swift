@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Lottie
 
 class ViewController: NSViewController {
 

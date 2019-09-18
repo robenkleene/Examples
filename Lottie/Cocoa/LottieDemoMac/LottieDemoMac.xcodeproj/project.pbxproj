@@ -7,13 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		457994F823329548008D80E0 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457994F723329548008D80E0 /* Lottie.framework */; };
+		457994FA2332961E008D80E0 /* Lottie.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 457994F723329548008D80E0 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		457DDF81233156030082E65B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457DDF80233156030082E65B /* AppDelegate.swift */; };
 		457DDF83233156030082E65B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457DDF82233156030082E65B /* ViewController.swift */; };
 		457DDF85233156040082E65B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457DDF84233156040082E65B /* Assets.xcassets */; };
 		457DDF88233156040082E65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457DDF86233156040082E65B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		457994F923329614008D80E0 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				457994FA2332961E008D80E0 /* Lottie.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		457994F723329548008D80E0 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/Mac/Lottie.framework; sourceTree = "<group>"; };
 		457DDF7D233156030082E65B /* LottieDemoMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottieDemoMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457DDF80233156030082E65B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457DDF82233156030082E65B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,17 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457994F823329548008D80E0 /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		457994F623329548008D80E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				457994F723329548008D80E0 /* Lottie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		457DDF74233156030082E65B = {
 			isa = PBXGroup;
 			children = (
 				457DDF7F233156030082E65B /* LottieDemoMac */,
 				457DDF7E233156030082E65B /* Products */,
+				457994F623329548008D80E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +100,7 @@
 				457DDF79233156030082E65B /* Sources */,
 				457DDF7A233156030082E65B /* Frameworks */,
 				457DDF7B233156030082E65B /* Resources */,
+				457994F923329614008D80E0 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -274,6 +302,10 @@
 				CODE_SIGN_ENTITLEMENTS = LottieDemoMac/LottieDemoMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = LottieDemoMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,6 +324,10 @@
 				CODE_SIGN_ENTITLEMENTS = LottieDemoMac/LottieDemoMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = LottieDemoMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
