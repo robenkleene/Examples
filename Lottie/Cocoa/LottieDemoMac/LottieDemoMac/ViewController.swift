@@ -13,8 +13,14 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let animationView = AnimationView(name: "SolarSystem")
+        animationView.frame = self.view.bounds
+        animationView.contentMode = .scaleAspectFill
+        animationView.loopMode = .loop
+        view.addSubview(animationView)
+        
+        animationView.play()
     }
 
     override var representedObject: Any? {
