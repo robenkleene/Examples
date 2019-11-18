@@ -1,4 +1,4 @@
-.PHONY: run
+.PHONY: server
 
-run:
+server:
 	ruby -run -e httpd -- -p 5000 .
