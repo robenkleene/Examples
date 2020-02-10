@@ -14,6 +14,7 @@
     },
     "manifest_version": 2,
     "name": "Getting Started Example",
+    "options_page": "options.html",
     "page_action": {
         "default_icon": {
             "128": "images/get_started128.png",
@@ -24,6 +25,7 @@
         "default_popup": "popup.html"
     },
     "permissions": [
+        "activeTab",
         "declarativeContent",
         "storage"
     ],
