@@ -5,10 +5,11 @@ import { Canvas } from "react-three-fiber";
 
 function Cube() {
   return (
-    <mesh>
+    <mesh position={[0, 0, 0]}>
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+      <meshStandardMaterial attach="material" color="pink" />
     </mesh>
-  )
+  );
 }
 
 function Scene() {
@@ -16,8 +17,9 @@ function Scene() {
     <>
       <ambientLight />:
       <pointLight position={[-1, 2, 4]} />
-    </ >
-  )
+      <Cube />
+    </>
+  );
 }
 
 function App() {
