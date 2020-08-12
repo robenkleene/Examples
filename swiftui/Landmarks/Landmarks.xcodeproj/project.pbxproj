@@ -13,6 +13,7 @@
 		451DCE0224DDC16200D24CA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451DCE0124DDC16200D24CA1 /* Assets.xcassets */; };
 		451DCE0524DDC16200D24CA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451DCE0424DDC16200D24CA1 /* Preview Assets.xcassets */; };
 		451DCE0824DDC16200D24CA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451DCE0624DDC16200D24CA1 /* LaunchScreen.storyboard */; };
+		45AEA26724E4A00D000CBDBC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEA26624E4A00D000CBDBC /* MapView.swift */; };
 		45B182A524E34C9500C91AF7 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B182A424E34C9500C91AF7 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		451DCE0424DDC16200D24CA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		451DCE0724DDC16200D24CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		451DCE0924DDC16200D24CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45AEA26624E4A00D000CBDBC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		45B182A424E34C9500C91AF7 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				451DCDFF24DDC16000D24CA1 /* ContentView.swift */,
 				451DCE0124DDC16200D24CA1 /* Assets.xcassets */,
 				45B182A424E34C9500C91AF7 /* CircleImage.swift */,
+				45AEA26624E4A00D000CBDBC /* MapView.swift */,
 				451DCE0624DDC16200D24CA1 /* LaunchScreen.storyboard */,
 				451DCE0924DDC16200D24CA1 /* Info.plist */,
 				451DCE0324DDC16200D24CA1 /* Preview Content */,
@@ -151,6 +154,7 @@
 			files = (
 				451DCDFC24DDC16000D24CA1 /* AppDelegate.swift in Sources */,
 				45B182A524E34C9500C91AF7 /* CircleImage.swift in Sources */,
+				45AEA26724E4A00D000CBDBC /* MapView.swift in Sources */,
 				451DCDFE24DDC16000D24CA1 /* SceneDelegate.swift in Sources */,
 				451DCE0024DDC16000D24CA1 /* ContentView.swift in Sources */,
 			);
