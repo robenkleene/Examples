@@ -1,5 +1,6 @@
 import React from "react";
-import { Canvas } from "react-three-fiber";
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { Canvas, useThree } from "react-three-fiber";
 
 import './App.css';
 
@@ -13,6 +14,13 @@ function Cube(props) {
 }
 
 function Scene() {
+  const {
+    camera,
+    gl: {
+      domElement
+    }
+  } = useThree()
+
   return (
     <>
       <ambientLight />:
