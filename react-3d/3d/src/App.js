@@ -1,8 +1,10 @@
 import React from "react";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { Canvas, useThree } from "react-three-fiber";
+import { Canvas, useThree, extend } from "react-three-fiber";
 
 import './App.css';
+
+extend({ OrbitControls });
 
 function Cube(props) {
   return (
@@ -27,6 +29,8 @@ function Scene() {
       <pointLight intensity={0.3} position={[-1, 2, 4]} />
       <Cube rotation={[10, 10, 0]} position={[0, 0, 0]} />
       <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
+
+      <orbitControls args={[ camera, domElement ]} />
     </>
   );
 }
