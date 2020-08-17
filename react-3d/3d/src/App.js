@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { Canvas, useThree, extend } from "react-three-fiber";
 
-import './App.css';
+import "./App.css";
 
 extend({ OrbitControls });
 
 function Cube(props) {
-
-  const [isBig, setIsBig] = useState(false)
+  const [isBig, setIsBig] = useState(false);
 
   const size = isBig ? 2 : 1;
 
   return (
-    <mesh {...props}>
+    <mesh {...props} onClick={() => setIsBig(!isBig)}>
       <boxBufferGeometry attach="geometry" args={[size, size, size]} />
       <meshStandardMaterial attach="material" color="pink" />
     </mesh>
@@ -23,10 +22,8 @@ function Cube(props) {
 function Scene() {
   const {
     camera,
-    gl: {
-      domElement
-    }
-  } = useThree()
+    gl: { domElement },
+  } = useThree();
 
   return (
     <>
@@ -34,8 +31,7 @@ function Scene() {
       <pointLight intensity={0.3} position={[-1, 2, 4]} />
       <Cube rotation={[10, 10, 0]} position={[0, 0, 0]} />
       <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
-
-      <orbitControls args={[ camera, domElement ]} />
+      <orbitControls args={[camera, domElement]} />
     </>
   );
 }
