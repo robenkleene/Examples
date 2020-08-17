@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { Canvas, useThree, extend } from "react-three-fiber";
 
@@ -7,9 +7,14 @@ import './App.css';
 extend({ OrbitControls });
 
 function Cube(props) {
+
+  const [isBig, setIsBig] = useState(false)
+
+  const size = isBig ? 2 : 1;
+
   return (
     <mesh {...props}>
-      <boxBufferGeometry attach="geometry" args={[2, 2, 1]} />
+      <boxBufferGeometry attach="geometry" args={[size, size, size]} />
       <meshStandardMaterial attach="material" color="pink" />
     </mesh>
   );
