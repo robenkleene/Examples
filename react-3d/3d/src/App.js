@@ -13,6 +13,7 @@ function Cube(props) {
 
   useFrame(() => {
     ref.current.rotation.x += 0.01
+    ref.current.rotation.y += 0.01
   })
 
   const size = isBig ? 2 : 1;
