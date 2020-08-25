@@ -27,7 +27,7 @@ function Cube(props) {
     <a.mesh
       {...props}
       ref={ref}
-      scale={[2, 2, 2]}
+      scale={[2, 1, 2]}
       onClick={() => setIsBig(!isBig)}
       onPointerOver={() => setIsHovered(false)}
       onPointerOut={() => setIsHovered(true)}
