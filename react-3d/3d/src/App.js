@@ -17,8 +17,9 @@ function Cube(props) {
     ref.current.rotation.y += 0.01;
   });
 
-  const { size } = useSpring({
+  const { size, x } = useSpring({
     size: isBig ? [2, 2, 2] : [1, 1, 1],
+    x: isBig ? 2 : 0
   });
 
   const color = isHovered ? "pink" : "salmon";
@@ -28,6 +29,7 @@ function Cube(props) {
       {...props}
       ref={ref}
       scale={size}
+      position-x={x}
       onClick={() => setIsBig(!isBig)}
       onPointerOver={() => setIsHovered(false)}
       onPointerOut={() => setIsHovered(true)}
