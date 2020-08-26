@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { Canvas, useThree, extend, useFrame } from "react-three-fiber";
-import { a, useSpring } from "react-spring/three"
+import { a, useSpring } from "react-spring/three";
 
 import "./App.css";
 
@@ -13,13 +13,13 @@ function Cube(props) {
   const ref = useRef();
 
   useFrame(() => {
-    ref.current.rotation.x += 0.01
-    ref.current.rotation.y += 0.01
-  })
+    ref.current.rotation.x += 0.01;
+    ref.current.rotation.y += 0.01;
+  });
 
   const { size } = useSpring({
-    size: isBig ? 2 : 1
-  })
+    size: isBig ? [2, 2, 2] : [1, 1, 1],
+  });
 
   const color = isHovered ? "pink" : "salmon";
 
@@ -27,7 +27,7 @@ function Cube(props) {
     <a.mesh
       {...props}
       ref={ref}
-      scale={[2, 1, 2]}
+      scale={size}
       onClick={() => setIsBig(!isBig)}
       onPointerOver={() => setIsHovered(false)}
       onPointerOut={() => setIsHovered(true)}
