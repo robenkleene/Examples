@@ -34,7 +34,7 @@ function Cube(props) {
       onPointerOver={() => setIsHovered(false)}
       onPointerOut={() => setIsHovered(true)}
     >
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+      <cylinderBufferGeometry attach="geometry" args={[1, 1, 3, 12]} />
       <meshStandardMaterial attach="material" color={color} />
     </a.mesh>
   );
