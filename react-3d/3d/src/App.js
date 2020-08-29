@@ -19,7 +19,7 @@ function Cube(props) {
 
   const { size, x } = useSpring({
     size: isBig ? [2, 2, 2] : [1, 1, 1],
-    x: isBig ? 2 : 0
+    x: isBig ? 2 : 0,
   });
 
   const color = isHovered ? "pink" : "salmon";
@@ -35,7 +35,12 @@ function Cube(props) {
       onPointerOut={() => setIsHovered(true)}
     >
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-      <meshStandardMaterial roughness={0} attach="material" color={color} />
+      <meshStandardMaterial
+        roughness={1}
+        metalness={0.5}
+        attach="material"
+        color={color}
+      />
     </a.mesh>
   );
 }
