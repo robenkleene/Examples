@@ -57,7 +57,7 @@ function Scene() {
   return (
     <>
       <ambientLight />:
-      <pointLight intensity={0.3} position={[-1, 2, 4]} />
+      <pointLight intensity={0.3} position={[-1, 2, 0]} />
       <Cube rotation={[10, 10, 0]} position={[0, 0, 0]} />
       <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
       <orbitControls args={[camera, domElement]} />
