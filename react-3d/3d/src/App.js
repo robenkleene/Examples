@@ -52,7 +52,7 @@ function Plane() {
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2, 0]}>
       <planeBufferGeometry attach="geometry" args={[10, 10]} />
-      <meshStandardMaterial attach="material" color="blue" />
+      <meshPhongMaterial attach="material" color="#d3d3d3" />
     </mesh>
   );
 }
