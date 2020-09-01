@@ -72,7 +72,7 @@ function Scene() {
   return (
     <>
       <ambientLight />:
-      <pointLight castShadow={true} intensity={0.3} position={[0, 0, 3]} />
+      <pointLight castShadow={true} intensity={0.3} position={[0, 3, 3]} />
       <Cube rotation={[10, 10, 0]} position={[0, 0, 0]} />
       <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
       <Plane />
