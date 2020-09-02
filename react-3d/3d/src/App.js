@@ -55,9 +55,9 @@ function Plane() {
     <mesh
       receiveShadow={true}
       rotation={[-Math.PI / 2, 0, 0]}
-      position={[0, -2, 0]}
+      position={[0, -2, -5]}
     >
-      <planeBufferGeometry attach="geometry" args={[10, 10]} />
+      <planeBufferGeometry attach="geometry" args={[20, 20]} />
       <meshPhongMaterial attach="material" color="#d3d3d3" />
     </mesh>
   );
@@ -72,7 +72,7 @@ function Scene() {
   return (
     <>
       <ambientLight />:
-      <pointLight castShadow={true} intensity={0.3} position={[0, 3, 3]} />
+      <pointLight castShadow={true} intensity={0.3} position={[0, 5, 2]} />
       <Cube rotation={[10, 10, 0]} position={[0, 0, 0]} />
       <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
       <Plane />
