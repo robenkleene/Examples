@@ -1,11 +1,9 @@
 import React, { useState, useRef } from "react";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { OrbitControls } from "drei";
 import { Canvas, useThree, extend, useFrame } from "react-three-fiber";
 import { a, useSpring } from "react-spring/three";
 
 import "./App.css";
-
-extend({ OrbitControls });
 
 function Cube(props) {
   const [isBig, setIsBig] = useState(false);
@@ -64,11 +62,6 @@ function Plane() {
 }
 
 function Scene() {
-  const {
-    camera,
-    gl: { domElement },
-  } = useThree();
-
   return (
     <>
       <ambientLight />:
@@ -76,7 +69,7 @@ function Scene() {
       <Cube rotation={[10, 10, 0]} position={[0, 0, 0]} />
       <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
       <Plane />
-      <orbitControls args={[camera, domElement]} />
+      <OrbitControls />
     </>
   );
 }
