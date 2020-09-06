@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { OrbitControls, Torus } from "drei";
 import { Canvas, useThree, extend, useFrame } from "react-three-fiber";
 import { a, useSpring } from "react-spring/three";
+import { Controls, useControl } from "react-three-gui";
 
 import "./App.css";
 
@@ -62,11 +63,12 @@ function Plane() {
 }
 
 function Scene() {
+  const positionX = useControl('Position X', { type: 'number' })
   return (
     <>
       <ambientLight />:
       <spotLight castShadow={true} intensity={0.3} position={[0, 10, 4]} />
-      <Cube rotation={[10, 10, 0]} position={[0, 0, 0]} />
+      <Cube rotation={[10, 10, 0]} position={[positionX, 0, 0]} />
       <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
       <Torus args={[1, 0.2, 10, 20]} position={[-2, 1, -1]}>
         <meshPhongMaterial
@@ -85,9 +87,12 @@ function Scene() {
 
 function App() {
   return (
-    <Canvas shadowMap={true}>
-      <Scene />
-    </Canvas>
+    <>
+      <Canvas shadowMap={true}>
+        <Scene />
+      </Canvas>
+      <Controls />
+    </>
   );
 }
 
