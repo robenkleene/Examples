@@ -68,11 +68,14 @@ function Scene() {
     max: 10,
     min: -10,
   });
+  const { x, y } = useControl("Rotation", {
+    type: "xypad"
+  });
   return (
     <>
       <ambientLight />:
       <spotLight castShadow={true} intensity={0.3} position={[0, 10, 4]} />
-      <Cube rotation={[10, 10, 0]} position={[positionX, 0, 0]} />
+      <Cube rotation={[x, y, 0]} position={[positionX, 0, 0]} />
       <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
       <Torus args={[1, 0.2, 10, 20]} position={[-2, 1, -1]}>
         <meshPhongMaterial
