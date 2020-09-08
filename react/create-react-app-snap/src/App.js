@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Button from "./components/Button/Button.js"
+import Button from "components/Button/Button"
 
 function App() {
   return (
