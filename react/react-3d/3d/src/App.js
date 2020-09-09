@@ -11,10 +11,10 @@ function Cube(props) {
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef();
 
-  useFrame(() => {
-    ref.current.rotation.x += 0.01;
-    ref.current.rotation.y += 0.01;
-  });
+  // useFrame(() => {
+  //   ref.current.rotation.x += 0.01;
+  //   ref.current.rotation.y += 0.01;
+  // });
 
   const { size, x } = useSpring({
     size: isBig ? [2, 2, 2] : [1, 1, 1],
@@ -71,6 +71,8 @@ function Scene() {
   const { x, y } = useControl("Rotation", {
     type: "xypad"
   });
+  console.log(" x, y ", x, y);
+
   return (
     <>
       <ambientLight />
