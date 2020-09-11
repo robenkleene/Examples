@@ -1,9 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, Suspense } from "react";
 import { OrbitControls, Torus } from "drei";
-import { Canvas, useThree, extend, useFrame } from "react-three-fiber";
+import { TextureLoader } from "three"
+import { Canvas, useThree, extend, useFrame, useLoader } from "react-three-fiber";
 import { a, useSpring } from "react-spring/three";
 import { ControlsProvider, Controls, useControl } from "react-three-gui";
-
+import imageUrl from "./logo.png";
 import "./App.css";
 
 function Cube(props) {
@@ -20,6 +21,7 @@ function Cube(props) {
     size: isBig ? [2, 2, 2] : [1, 1, 1],
     x: isBig ? 2 : 0,
   });
+  const texture = useLoader(TextureLoader, imageUrl);
 
   const color = isHovered ? "pink" : "salmon";
 
@@ -37,6 +39,7 @@ function Cube(props) {
     >
       <sphereBufferGeometry attach="geometry" args={[1, 8, 6]} />
       <meshPhongMaterial
+        map={texture}
         flatShading={true}
         roughness={1}
         metalness={0.5}
@@ -77,8 +80,12 @@ function Scene() {
     <>
       <ambientLight />
       <spotLight castShadow={true} intensity={0.3} position={[0, 10, 4]} />
-      <Cube rotation={[10, 10, 0]} position={[positionX, 0, 0]} />
-      <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
+      <Suspense fallback={null}>
+        <Cube rotation={[10, 10, 0]} position={[positionX, 0, 0]} />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Cube rotation={[10, 20, 0]} position={[2, 2, 0]} />
+      </Suspense>
       <Torus args={[1, 0.2, 10, 20]} position={[-2, 1, -1]}>
         <meshPhongMaterial
           roughness={1}
