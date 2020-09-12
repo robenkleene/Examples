@@ -12,10 +12,10 @@ function Cube(props) {
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef();
 
-  // useFrame(() => {
-  //   ref.current.rotation.x += 0.01;
-  //   ref.current.rotation.y += 0.01;
-  // });
+  useFrame(() => {
+    ref.current.rotation.x += 0.01;
+    ref.current.rotation.y += 0.01;
+  });
 
   const { size, x } = useSpring({
     size: isBig ? [2, 2, 2] : [1, 1, 1],
@@ -37,7 +37,7 @@ function Cube(props) {
       onPointerOver={() => setIsHovered(false)}
       onPointerOut={() => setIsHovered(true)}
     >
-      <sphereBufferGeometry attach="geometry" args={[1, 8, 6]} />
+      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshPhongMaterial
         map={texture}
         flatShading={true}
@@ -46,7 +46,6 @@ function Cube(props) {
         shininess={100}
         clearcoat={1}
         attach="material"
-        color={color}
       />
     </a.mesh>
   );
