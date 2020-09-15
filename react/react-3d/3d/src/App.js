@@ -5,6 +5,7 @@ import { Canvas, useThree, extend, useFrame, useLoader } from "react-three-fiber
 import { a, useSpring } from "react-spring/three";
 import { ControlsProvider, Controls, useControl } from "react-three-gui";
 import imageUrl from "./logo.png";
+import bumpUrl from "./logo.png";
 import "./App.css";
 
 function Cube(props) {
@@ -22,6 +23,7 @@ function Cube(props) {
     x: isBig ? 2 : 0,
   });
   const texture = useLoader(TextureLoader, imageUrl);
+  const bump = useLoader(TextureLoader, bumpUrl);
 
   const color = isHovered ? "pink" : "salmon";
 
@@ -40,6 +42,7 @@ function Cube(props) {
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshPhongMaterial
         map={texture}
+        bumpMap={bump}
         flatShading={true}
         roughness={1}
         metalness={0.5}
