@@ -5,7 +5,7 @@ import { Canvas, useThree, extend, useFrame, useLoader } from "react-three-fiber
 import { a, useSpring } from "react-spring/three";
 import { ControlsProvider, Controls, useControl } from "react-three-gui";
 import imageUrl from "./logo.png";
-import bumpUrl from "./logo.png";
+import bumpUrl from "./logo.jpg";
 import "./App.css";
 
 function Cube(props) {
@@ -41,7 +41,7 @@ function Cube(props) {
     >
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshPhongMaterial
-        map={texture}
+        color="teal"
         bumpMap={bump}
         flatShading={true}
         roughness={1}
