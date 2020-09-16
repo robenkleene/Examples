@@ -41,6 +41,7 @@ function Cube(props) {
     >
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshPhongMaterial
+        map={texture}
         color="teal"
         bumpMap={bump}
         flatShading={true}
