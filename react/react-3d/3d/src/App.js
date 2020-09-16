@@ -39,11 +39,12 @@ function Cube(props) {
       onPointerOver={() => setIsHovered(false)}
       onPointerOut={() => setIsHovered(true)}
     >
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+      <boxBufferGeometry attach="geometry" args={[1, 1, 1, 20, 20, 20]} />
       <meshPhongMaterial
         map={texture}
         color="teal"
-        bumpMap={bump}
+        displacementMap={bump}
+        displacementScale={0.1}
         flatShading={true}
         roughness={1}
         metalness={0.5}
