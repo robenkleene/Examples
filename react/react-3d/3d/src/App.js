@@ -1,4 +1,4 @@
-import * as THREE from "Three";
+import * as THREE from "three";
 import React, { useState, useRef, useEffect } from "react";
 import { OrbitControls } from "drei";
 import { Canvas, useFrame } from "react-three-fiber";
