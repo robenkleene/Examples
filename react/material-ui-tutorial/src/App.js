@@ -1,11 +1,11 @@
-import React from 'react';
-import './App.css';
-import { Button } from '@material-ui/core';
+import React from "react";
+import "./App.css";
+import { Button } from "@material-ui/core";
 
 function App() {
   return (
     <div className="App">
-      <Button>This is our first button</Button>
+      <Button color="secondary" variant="outlined">This is our first button</Button>
     </div>
   );
 }
