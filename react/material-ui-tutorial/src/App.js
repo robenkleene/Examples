@@ -1,11 +1,30 @@
 import React from "react";
 import "./App.css";
-import { Button } from "@material-ui/core";
+import { Button, makeStyles, Typography } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  helloThereStyle: {
+    fontStyle: "oblique",
+    color: "red",
+    fontSize: "30px"
+  },
+  buttonStyles: {
+    color: 'green',
+    border: 0
+  }
+});
 
 function App() {
+  const classes = useStyles();
+
   return (
     <div className="App">
-      <Button color="secondary" variant="outlined">This is our first button</Button>
+      <Typography className={classes.helloThereStyle} variant="h1" color="primary">
+        Hello there
+      </Typography>
+      <Button className={classes.buttonStyles} color="secondary" variant="outlined">
+        This is our first button
+      </Button>
     </div>
   );
 }
