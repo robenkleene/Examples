@@ -4,13 +4,7 @@ import { Button, makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
   helloThereStyle: {
-    fontStyle: "oblique",
-    color: "red",
-    fontSize: "30px"
-  },
-  buttonStyles: {
-    color: 'green',
-    border: 0
+    fontStyle: "oblique"
   }
 });
 
