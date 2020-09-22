@@ -6,16 +6,28 @@ body {
 }
 
 .parallax-wrapper {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding-top: 20vh;
   box-sizing: border-box;
 }
 
+.parallax-wrapper::before {
+  content:"";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url(trianglify.png);
+  position: absolute;
+  z-index: -1;
+}
+
 .regular-wrapper {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding-top: 20vh;
+  background-image: url(trianglify2.png);
 }
 
 .content {
