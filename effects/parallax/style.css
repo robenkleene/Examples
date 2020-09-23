@@ -1,8 +1,16 @@
+html {
+  overflow: hidden;
+}
 body {
   margin: 0;
   font-size: 26px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .parallax-wrapper {
@@ -10,6 +18,7 @@ body {
   height: 100vh;
   padding-top: 20vh;
   box-sizing: border-box;
+  transform-style: preserve-3d;
 }
 
 .parallax-wrapper::before {
@@ -21,6 +30,7 @@ body {
   background-image: url(trianglify.png);
   position: absolute;
   z-index: -1;
+  transform: translateZ(-1px) scale(2);
 }
 
 .regular-wrapper {
