@@ -29,6 +29,7 @@ body {
   mix-blend-mode: difference;
   filter: blur(3px);
 }
+
 .neon-wrapper {
   position: absolute;
   top: 50%;
@@ -38,6 +39,7 @@ body {
   filter: brightness(300%);
   overflow: hidden;
 }
+
 .gradient {
   background: linear-gradient(137.82deg, #7BD5C0 2.9%, #C8A039 96.14%);
   position: absolute;
