@@ -17,7 +17,7 @@ function Boxes() {
           const id = i++;
           tempObject.position.set(5 - x, 5 - y, 5 - z);
           tempObject.updateMatrix();
-          ref.current.setMatrix(id, tempObject.matrix);
+          ref.current.setMatrixAt(id, tempObject.matrix);
         }
       }
     }
