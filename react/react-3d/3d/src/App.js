@@ -10,6 +10,8 @@ function Boxes() {
   const ref = useRef();
 
   useFrame(() => {
+    ref.current.rotation.x += 0.01;
+    ref.current.rotation.y += 0.01;
     let i = 0;
     for (let x = 0; x < 10; x++) {
       for (let y = 0; y < 10; y++) {
@@ -45,7 +47,13 @@ function Scene() {
 function App() {
   return (
     <>
-      <Canvas>
+      <Canvas
+        camera={{
+          position: [0, 0, 15],
+          near: 5,
+          far: 20,
+        }}
+      >
         <Scene />
       </Canvas>
     </>
