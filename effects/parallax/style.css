@@ -38,6 +38,8 @@ body {
   height: 100vh;
   padding-top: 20vh;
   background-image: url(trianglify2.png);
+  z-index: 2;
+  position: relative;
 }
 
 .content {
