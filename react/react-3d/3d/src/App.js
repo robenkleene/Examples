@@ -9,7 +9,9 @@ const tempObject = new THREE.Object3D();
 function Boxes() {
   const ref = useRef();
 
-  useFrame(() => {
+  useFrame((state) => {
+    const time = state.clock.getElapsedTime();
+    console.log("time = " + Math.sin(time / 1));
     ref.current.rotation.x += 0.01;
     ref.current.rotation.y += 0.01;
     let i = 0;
