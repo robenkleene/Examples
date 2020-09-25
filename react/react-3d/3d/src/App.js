@@ -11,7 +11,7 @@ function Boxes() {
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
-    console.log("time = " + Math.sin(time / 1));
+    const grow = Math.sin(time / 1);
     ref.current.rotation.x += 0.01;
     ref.current.rotation.y += 0.01;
     let i = 0;
@@ -19,12 +19,13 @@ function Boxes() {
       for (let y = 0; y < 10; y++) {
         for (let z = 0; z < 10; z++) {
           const id = i++;
-          tempObject.position.set(5 - x * 2, 5 - y * 2, 5 - z * 2);
+          tempObject.position.set(5 - x * grow, 5 - y * grow, 5 - z * grow);
           tempObject.updateMatrix();
           ref.current.setMatrixAt(id, tempObject.matrix);
         }
       }
     }
+    ref.current.instanceMatrix.needsUpdate = true;
   });
 
   return (
