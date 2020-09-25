@@ -12,8 +12,8 @@ function Boxes() {
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
     const grow = Math.sin(time / 1);
-    ref.current.rotation.x += 0.01;
-    ref.current.rotation.y += 0.01;
+    ref.current.rotation.x = grow;
+    ref.current.rotation.y = grow;
     let i = 0;
     for (let x = 0; x < 10; x++) {
       for (let y = 0; y < 10; y++) {
@@ -53,7 +53,7 @@ function App() {
       <Canvas
         camera={{
           position: [0, 0, 15],
-          near: 5,
+          near: 1,
           far: 20,
         }}
       >
