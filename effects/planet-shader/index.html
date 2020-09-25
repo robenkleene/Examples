@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="world"></div>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      varying vec2 vUv;
+           varying vec3 vNormal;
+           void main() {
+             	vNormal = normal;
+             gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+           }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      #define NUM_OCTAVES 5
+           uniform vec4 resolution;
+           uniform float time;
+           uniform sampler2D color;
+           uniform sampler2D colormap;
+           uniform sampler2D noiseTex;
+           varying vec2 vUv;
+           varying vec3 vNormal;
+
+           float rand(vec2 n) {
+             return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
+           }
+
+           float noise(vec2 p){
+             vec2 ip = floor(p);
+             vec2 u = fract(p);
+             u = u*u*(3.0-2.0*u);
+
+             float res = mix(
+               mix(rand(ip),rand(ip+vec2(1.0,0.0)),u.x),
+               mix(rand(ip+vec2(0.0,1.0)),rand(ip+vec2(1.0,1.0)),u.x),u.y);
+             return res*res;
+           }
+
+           float fbm(vec2 x) {
+             float v = 0.0;
+             float a = 0.5;
+             vec2 shift = vec2(100);
+             // Rotate to reduce axial bias
+               mat2 rot = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.50));
+             for (int i = 0; i < NUM_OCTAVES; ++i) {
+               v += a * noise(x);
+               x = rot * x * 2.0 + shift;
+               a *= 0.5;
+             }
+             return v;
+           }
+
+           vec3 rgbcol(float r, float g, float b) {
+             return vec3(r/255.0,g/255.0,b/255.0);
+           }
+
+           float setOpacity(float r, float g, float b) {
+             float tone = (r + g + b) / 3.0;
+             float alpha = 1.0;
+             if(tone<0.9) {
+               alpha = 0.0;
+             }
+             return alpha;
+           }
+
+
+
+           float grayScale(float r,float g,float b){
+             float v = 0.30*r + 0.59*g + 0.11*b;
+             return v;
+           }
+
+           void main()	{
+            vec2 uv = normalize( vNormal ).xy * 0.5 + 0.5; ;
+            vec2 newUv = uv + vec2(0.0, -time*0.0005);
+            float density = 2.;
+            vec2 p = newUv*density;
+            float noise2 = noise(uv * .5 + time * 0.1) * noise(uv * .5 - time * 0.3);
+            float noise = fbm( p + fbm( p + fbm( p   + fbm( p  )) ) );
+            gl_FragColor = vec4(vec3(noise), 1.0);
+            vec4 grad = texture2D(color,gl_FragColor.rg);
+            vec3 tex = texture2D(noiseTex, uv*0.5 + gl_FragColor.rg*0.25).rgb;
+            gl_FragColor = vec4(tex,1.0) + grad;
+            float tone = grayScale(gl_FragColor.r,gl_FragColor.g,gl_FragColor.b);
+            vec3 rumpedCol = texture2D(colormap,vec2(tone,0.)).rgb;
+            gl_FragColor = vec4(vec3(rumpedCol),1.0);
+           }
+    </script>
+  </body>
+</html>
