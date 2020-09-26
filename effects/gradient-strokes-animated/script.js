@@ -10,10 +10,12 @@ function create(p) {
   background(0);
   strokeWeight(1);
   noFill();
-  const r = random(0, 255);
-  const g = random(0, 255);
-  const b = random(0, 255);
+
+  const r = 255;
+  const g = 255;
+  const b = 255;
   const a = 10;
+
   for (let i = 0; i < 500; i++) {
     let radius = 70 + 1 * i;
     zoff += 0.001;
