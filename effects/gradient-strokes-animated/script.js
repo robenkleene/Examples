@@ -3,7 +3,7 @@ function setup() {
   noLoop();
 }
 let phase = 0;
-let zOffset = 0;
+let zoff = 0;
 let noiseMax = 0.8;
 
 function create(p) {
@@ -18,15 +18,15 @@ function create(p) {
 
   for (let i = 0; i < 500; i++) {
     let radius = 70 + 1 * i;
-    zOffset += 0.001;
+    zoff += 0.001;
     phase += 0.008;
     stroke(map(i, 0, 100, 0, 255), g, b, a);
 
     beginShape();
     for (let a = 0; a < TWO_PI; a += radians(3)) {
-      let xOffset = map(cos(a + phase), -1, 1, 0, noiseMax);
-      let yOffset = map(sin(a + phase), -1, 1, 0, noiseMax);
-      let r = noise(xOffset, yOffset, zOffset);
+      let xoff = map(cos(a + phase), -1, 1, 0, noiseMax);
+      let yoff = map(sin(a + phase), -1, 1, 0, noiseMax);
+      let r = noise(xoff, yoff, zoff);
       let x = width / 2 + r * radius * cos(a);
       let y = height / 2 + r * radius * sin(a);
       vertex(x + i, y);
@@ -35,9 +35,9 @@ function create(p) {
 
     beginShape();
     for (let a = 0; a < TWO_PI; a += radians(3)) {
-      let xOffset = map(cos(a + phase), -1, 1, 0, noiseMax);
-      let yOffset = map(sin(a + phase), -1, 1, 0, noiseMax);
-      let r = noise(xOffset, yOffset, zOffset);
+      let xoff = map(cos(a + phase), -1, 1, 0, noiseMax);
+      let yoff = map(sin(a + phase), -1, 1, 0, noiseMax);
+      let r = noise(xoff, yoff, zoff);
       let x = width / 2 + r * radius * cos(a);
       let y = height / 2 + r * radius * sin(a);
       vertex(x - i, y);
