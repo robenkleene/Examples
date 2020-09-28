@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch via npm",
+      "type": "node",
+      "request": "launch",
+      "env": { "BROWSER": "google chrome" },
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "start"],
+      "serverReadyAction": {
+        "pattern": "Starting the development server...",
+        "uriFormat": "http://localhost:3000"
+      }
+    }
+  ]
+}
