@@ -8,9 +8,10 @@ import "./App.css";
 function Plant() {
   const ref = useRef();
   const { nodes } = useLoader(GLTFLoader, '/scene.gltf')
+  console.log("nodes", nodes);
 
   return (
-
+      <div></div>
     );
 }
 
