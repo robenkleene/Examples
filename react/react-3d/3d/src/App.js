@@ -1,11 +1,14 @@
 import * as THREE from "three";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, Suspense } from "react";
 import { OrbitControls } from "drei";
-import { Canvas, useFrame } from "react-three-fiber";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { Canvas, useFrame, useLoader } from "react-three-fiber";
 import "./App.css";
 
 function Plant() {
   const ref = useRef();
+  const { nodes } = useLoader(GLTFLoader, '/scene.gltf')
+
   return (
 
     );
@@ -16,7 +19,9 @@ function Scene() {
     <>
       <ambientLight />
       <pointLight intensity={0.3} position={[0, 10, 4]} />
-      <Plant />
+      <Suspense fallback={null}>
+        <Plant />
+      </Suspense>
       <OrbitControls />
     </>
   );
