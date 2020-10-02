@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch via npm",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "live-server",
+      "runtimeArgs": ["--browser=Microsoft Edge Beta"]
+    }
+  ]
+}
