@@ -5,8 +5,7 @@
       "name": "Launch via npm",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "live-server",
-      "runtimeArgs": ["--browser=Microsoft Edge Beta"]
+      "runtimeExecutable": "live-server"
     }
   ]
 }
