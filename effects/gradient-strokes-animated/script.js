@@ -6,7 +6,7 @@ let phase = 0;
 let zoff = 0;
 let noiseMax = 0.8;
 
-function create(p) {
+function create() {
   background(0);
   strokeWeight(1);
   noFill();
@@ -18,8 +18,10 @@ function create(p) {
 
   for (let i = 0; i < 500; i++) {
     let radius = 70 + 1 * i;
+
     zoff += 0.001;
     phase += 0.008;
+
     stroke(map(i, 0, 100, 0, 255), g, b, a);
 
     beginShape();
@@ -48,8 +50,7 @@ function create(p) {
 
 function draw() {
   clear();
-
-  create(2);
+  create();
 }
 
 function windowResized() {
