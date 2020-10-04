@@ -42,12 +42,12 @@ function createScene() {
   );
   camera.position.z = 5;
   renderer = new THREE.WebGLRenderer();
-  renderer.antialias = true;
-  renderer.setPixelRatio(window.devicePixelRatio);
+  // renderer.antialias = true;
+  // renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(width, height);
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-  renderer.interpolateneMapping = THREE.ACESFilmicToneMapping;
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  // renderer.interpolateneMapping = THREE.ACESFilmicToneMapping;
+  // renderer.outputEncoding = THREE.sRGBEncoding;
   document.getElementById("world").appendChild(renderer.domElement);
 }
 function createLights() {
