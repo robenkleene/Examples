@@ -2,6 +2,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   noLoop();
 }
+
 let phase = 0;
 let zoff = 0;
 let noiseMax = 0.8;

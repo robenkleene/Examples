@@ -5,7 +5,7 @@
       "name": "Live Server",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "live-server",
+      "runtimeExecutable": "live-server"
     },
     {
       "name": "Debug With Chrome",
