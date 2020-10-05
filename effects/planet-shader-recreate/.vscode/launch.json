@@ -2,10 +2,22 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch via npm",
+      "name": "Live Server",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "live-server"
+      "runtimeExecutable": "live-server",
+    },
+    {
+      "name": "Debug With Chrome",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "live-server",
+      "args": [ "--no-browser"],
+      "serverReadyAction": {
+        "pattern": "https?://127.0.0.1:([0-9]+)",
+        "action": "debugWithChrome",
+        "uriFormat": "http://localhost:%s"
+      }
     }
   ]
 }
