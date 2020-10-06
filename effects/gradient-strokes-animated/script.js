@@ -12,14 +12,14 @@ function create() {
   background(0);
   noFill();
 
-  const g = 255;
-  const b = 255;
-  const a = 10;
-  const noiseMax = 0.8;
-
   let phase = 0;
   let zoff = 0;  
   for (let i = 0; i < 500; i++) {
+    const g = 255;
+    const b = 255;
+    const a = 10;
+    const noiseMax = 0.8;
+  
     let radius = 70 + 1 * i;
 
     zoff += 0.001;
