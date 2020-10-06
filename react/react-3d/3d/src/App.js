@@ -1,18 +1,14 @@
 import * as THREE from "three";
 import React, { useState, useRef, useEffect, Suspense } from "react";
 import { OrbitControls } from "drei";
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Canvas, useFrame, useLoader } from "react-three-fiber";
 import "./App.css";
 
 function Plant() {
   const ref = useRef();
-  const { nodes } = useLoader(GLTFLoader, '/scene.gltf')
-  console.log("nodes", nodes);
-
-  return (
-      <div></div>
-    );
+  const gltf = useLoader(GLTFLoader, "/scene.gltf");
+  return <primitive object={gltf.scene} position={[0, 0, 0]} />;
 }
 
 function Scene() {
