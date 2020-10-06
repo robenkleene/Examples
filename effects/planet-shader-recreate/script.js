@@ -15,15 +15,15 @@ document.body.appendChild(renderer.domElement);
 camera.position.z = 5;
 
 // Model
-var geometry = new THREE.BoxGeometry();
+var geometry = new THREE.SphereGeometry(2, 32, 32);
 var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-var cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+var sphere = new THREE.Mesh(geometry, material);
+scene.add(sphere);
 
 function animate() {
   requestAnimationFrame(animate);
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
+  sphere.rotation.x += 0.01;
+  sphere.rotation.y += 0.01;
   renderer.render(scene, camera);
 }
 animate();

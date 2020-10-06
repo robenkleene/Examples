@@ -61,7 +61,7 @@ function createScene() {
 //   scene.add(pointlight);
 // }
 function plane() {
-  var planegeometry = new THREE.PlaneGeometry(5, 5, 32);
+  // var planegeometry = new THREE.PlaneGeometry(5, 5, 32);
   var spheregeometry = new THREE.SphereGeometry(2, 32, 32);
   material = new THREE.ShaderMaterial({
     uniforms: uniforms,
