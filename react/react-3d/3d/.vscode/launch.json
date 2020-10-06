@@ -2,15 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch via npm",
+      "name": "NPM Start",
       "type": "node",
       "request": "launch",
-      "env": { "BROWSER": "google chrome" },
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "start"]
+    },
+    {
+      "name": "Debug With Chrome",
+      "type": "node",
+      "request": "launch",
+      "env": {
+        "BROWSER": "none",
+      },
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run-script", "start"],
       "serverReadyAction": {
         "pattern": "Starting the development server...",
-        "uriFormat": "http://localhost:3000"
+        "uriFormat": "http://localhost:3000",
+        "action": "debugWithChrome"
       }
     }
   ]
