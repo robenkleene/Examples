@@ -3,9 +3,13 @@ function setup() {
   noLoop();
 }
 
+function draw() {
+  clear();
+  create();
+}
+
 function create() {
   background(0);
-  strokeWeight(1);
   noFill();
 
   const g = 255;
@@ -47,10 +51,6 @@ function create() {
   }
 }
 
-function draw() {
-  clear();
-  create();
-}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
