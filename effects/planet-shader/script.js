@@ -28,7 +28,7 @@ var uniforms = {
 };
 function init() {
   createScene();
-  createLights();
+  // createLights();
   plane();
   animate();
 }
@@ -50,16 +50,16 @@ function createScene() {
   // renderer.outputEncoding = THREE.sRGBEncoding;
   document.getElementById("world").appendChild(renderer.domElement);
 }
-function createLights() {
-  const hemislight = new THREE.HemisphereLight();
-  hemislight.intensity = 0.2;
-  scene.add(hemislight);
-  const pointlight = new THREE.PointLight();
-  pointlight.distance = 1000;
-  pointlight.intensity = 0.7;
-  pointlight.position.set(30, 70, 20);
-  scene.add(pointlight);
-}
+// function createLights() {
+//   const hemislight = new THREE.HemisphereLight();
+//   hemislight.intensity = 0.2;
+//   scene.add(hemislight);
+//   const pointlight = new THREE.PointLight();
+//   pointlight.distance = 1000;
+//   pointlight.intensity = 0.7;
+//   pointlight.position.set(30, 70, 20);
+//   scene.add(pointlight);
+// }
 function plane() {
   var planegeometry = new THREE.PlaneGeometry(5, 5, 32);
   var spheregeometry = new THREE.SphereGeometry(2, 32, 32);
