@@ -13,7 +13,7 @@
       "type": "node",
       "request": "launch",
       "env": {
-        "BROWSER": "none",
+        "BROWSER": "none"
       },
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run-script", "start"],
