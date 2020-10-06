@@ -1,3 +1,4 @@
 function setup() {
-  console.log("got here");
+  createCanvas(windowWidth, windowHeight);
+  noLoop();
 }

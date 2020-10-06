@@ -3,20 +3,18 @@ function setup() {
   noLoop();
 }
 
-let phase = 0;
-let zoff = 0;
-let noiseMax = 0.8;
-
 function create() {
   background(0);
   strokeWeight(1);
   noFill();
 
-  const r = 255;
   const g = 255;
   const b = 255;
   const a = 10;
+  const noiseMax = 0.8;
 
+  let phase = 0;
+  let zoff = 0;  
   for (let i = 0; i < 500; i++) {
     let radius = 70 + 1 * i;
 
