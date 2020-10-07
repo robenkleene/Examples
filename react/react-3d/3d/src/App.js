@@ -30,13 +30,7 @@ function Scene() {
 function App() {
   return (
     <>
-      <Canvas
-        camera={{
-          position: [0, 0, 15],
-          near: 1,
-          far: 20,
-        }}
-      >
+      <Canvas>
         <Scene />
       </Canvas>
     </>
