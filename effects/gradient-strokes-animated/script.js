@@ -7,8 +7,8 @@ function draw() {
   background(0);
   noFill();
 
-  const g = 255;
-  const b = 255;
+  const g = random(0, 255)
+  const b = random(0, 255)
   const a = 10;
   const noiseMax = 0.8;
 
