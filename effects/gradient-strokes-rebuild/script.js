@@ -4,7 +4,6 @@ function setup() {
 }
 
 function draw() {
-  clear();
   create();
 }
 
