@@ -9,7 +9,7 @@ function Plant() {
   const ref = useRef();
   const gltf = useLoader(GLTFLoader, "/scene.gltf");
   useFrame(() => {
-    ref.current.rotation.x += 0.01;
+    ref.current.rotation.y += 0.01;
   });
   return <primitive ref={ref} object={gltf.scene} position={[0, 0, 0]} />;
 }
