@@ -4,10 +4,6 @@ function setup() {
 }
 
 function draw() {
-  create();
-}
-
-function create() {
   background(0);
   noFill();
 
@@ -49,7 +45,6 @@ function create() {
     endShape(CLOSE);
   }
 }
-
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
