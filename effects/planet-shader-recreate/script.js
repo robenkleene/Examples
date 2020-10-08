@@ -49,11 +49,13 @@ var material = new THREE.ShaderMaterial({
   fragmentShader: document.getElementById("fragmentShader").textContent,
 });
 var sphere = new THREE.Mesh(geometry, material);
+// Rotate the sphere to a more interesting angle
+sphere.rotation.z = Math.PI / 1.5;
 scene.add(sphere);
 
-function animate(delta) {
+function animate(timestamp) {
   requestAnimationFrame(animate);
-  material.uniforms.time.value = delta * 0.6;
+  material.uniforms.time.value = timestamp * 0.6;
   renderer.render(scene, camera);
 }
 animate();
