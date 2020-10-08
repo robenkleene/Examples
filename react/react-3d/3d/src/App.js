@@ -30,13 +30,14 @@ function Scene() {
 function App() {
   return (
     <>
+      <h1>Plant</h1>
       <Canvas style={{ position: "absolute" }}>
         <Scene />
       </Canvas>
-      <div>
+      <main>
         <h3>You can buy a plant</h3>
         <button>Buy Plant</button>
-      </div>
+      </main>
     </>
   );
 }
