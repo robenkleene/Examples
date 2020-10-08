@@ -51,7 +51,7 @@ var material = new THREE.ShaderMaterial({
 var sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 
-function animate() {
+function animate(delta) {
   requestAnimationFrame(animate);
   material.uniforms.time.value = delta * 0.6;
   renderer.render(scene, camera);
