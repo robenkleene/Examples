@@ -8,7 +8,7 @@ var colormap = new THREE.TextureLoader().load(
 var color = new THREE.TextureLoader().load(
   "https://raw.githubusercontent.com/pizza3/asset/master/noise2.jpg"
 );
-var noi = new THREE.TextureLoader().load(
+var noiseTex = new THREE.TextureLoader().load(
   "https://raw.githubusercontent.com/pizza3/asset/master/fluid.jpg"
 );
 var uniforms = {
@@ -21,7 +21,7 @@ var uniforms = {
   },
   color: { type: "f", value: color },
   colormap: { type: "f", value: colormap },
-  noiseTex: { type: "f", value: noi },
+  noiseTex: { type: "f", value: noiseTex },
 };
 
 var scene = new THREE.Scene();
