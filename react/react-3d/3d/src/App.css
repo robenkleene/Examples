@@ -14,3 +14,7 @@ body,
 body {
   background: lightpink;
 }
+
+canvas {
+  border: solid 1px blue;
+}

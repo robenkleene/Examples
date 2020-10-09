@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <h1>Plant</h1>
-      <Canvas style={{ position: "absolute" }}>
+      <Canvas style={{ height: "40vh" }}>
         <Scene />
       </Canvas>
       <main>
