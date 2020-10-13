@@ -19,16 +19,14 @@ h1 {
   font-size: 8rem;
   text-align: center;
   color: #0a3d01;
-}
-
-canvas {
-  border: solid 1px blue;
+  margin-bottom: 0; 
 }
 
 main {
   padding: 1rem 10% 10rem;
   background: white;
   text-align: center;
+  margin-top: -80px;
 }
 
 h3 {
