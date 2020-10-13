@@ -37,4 +37,10 @@ h3 {
 
 button {
   background: lightpink;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 20px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }
