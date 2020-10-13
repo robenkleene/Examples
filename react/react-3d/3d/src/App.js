@@ -11,7 +11,7 @@ function Plant() {
   useFrame(() => {
     ref.current.rotation.y += 0.01;
   });
-  return <primitive ref={ref} object={gltf.scene} position={[0, 0, 0]} />;
+  return <primitive position={[0, -1.2, 0]} ref={ref} object={gltf.scene} />;
 }
 
 function Scene() {
@@ -31,7 +31,9 @@ function App() {
   return (
     <>
       <h1>Plant</h1>
-      <Canvas style={{ height: "40vh" }}>
+      <Canvas camera={{
+        position: [0,0,2],
+      }} style={{ height: "40vh" }}>
         <Scene />
       </Canvas>
       <main>
