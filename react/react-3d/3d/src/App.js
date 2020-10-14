@@ -22,7 +22,7 @@ function Scene() {
       <Suspense fallback={null}>
         <Plant />
       </Suspense>
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </>
   );
 }
