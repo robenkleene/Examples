@@ -37,18 +37,23 @@
       var geometry = new THREE.BoxGeometry();
       var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 
-      // TODO: Replace cube with loader of plant
-      var loader = new THREE.GLTFLoader();
+      var obj = new THREE.Mesh(geometry, material);
+      scene.add(obj);
 
-      var cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
+      var loader = new THREE.GLTFLoader();
+      loader.load(
+        "scene.gltf",
+        function (gltf) {
+          scene.add(gltf.scene);
+        }
+      );
 
       camera.position.z = 5;
 
       function animate() {
         requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+        obj.rotation.x += 0.01;
+        obj.rotation.y += 0.01;
         renderer.render(scene, camera);
       }
       animate();
