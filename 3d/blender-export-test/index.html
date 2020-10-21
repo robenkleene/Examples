@@ -37,8 +37,6 @@
       var geometry = new THREE.BoxGeometry();
       var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 
-      var obj = new THREE.Mesh(geometry, material);
-      scene.add(obj);
 
       var loader = new THREE.GLTFLoader();
       loader.load("scene.gltf", function (gltf) {
@@ -55,8 +53,6 @@
 
       function animate() {
         requestAnimationFrame(animate);
-        obj.rotation.x += 0.01;
-        obj.rotation.y += 0.01;
         renderer.render(scene, camera);
       }
       animate();
