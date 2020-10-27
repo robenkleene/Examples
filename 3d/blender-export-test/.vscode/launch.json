@@ -5,7 +5,13 @@
       "name": "Live Server",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "live-server"
+      "runtimeExecutable": "live-server",
+      "args": [ "--no-browser"],
+      "serverReadyAction": {
+        "pattern": "https?://127.0.0.1:([0-9]+)",
+        "uriFormat": "http://localhost:%s",
+        "action": "openExternally"
+      }
     },
     {
       "name": "Debug With Chrome",
