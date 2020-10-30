@@ -37,7 +37,7 @@
       );
       camera.position.z = 5;
       // Lights
-      var ambientLight = new THREE.AmbientLight(0x404040, 5);
+      var ambientLight = new THREE.AmbientLight(0x404040, 50);
       scene.add(ambientLight);
       var light = new THREE.PointLight(0xff0000, 1, 100);
       light.position.set(50, 50, 50);
@@ -45,7 +45,8 @@
 
       // Model
       var loader = new THREE.GLTFLoader();
-      loader.load("scene.gltf", function (gltf) {
+      loader.load("Glass Particle Sphere.gltf", function (gltf) {
+        gltf.scene.scale.set(.1,.1,.1);
         scene.add(gltf.scene);
         renderer.render(scene, camera);
       });

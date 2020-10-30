@@ -1,0 +1,113 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.75",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Sphere Glass",
+            "scale" : [
+                4,
+                4,
+                4
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "alphaMode" : "BLEND",
+            "name" : "Sphere Glass",
+            "pbrMetallicRoughness" : {}
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Sphere",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 33712,
+            "max" : [
+                0.9872313737869263,
+                0.9975767135620117,
+                0.9872314929962158
+            ],
+            "min" : [
+                -0.9872310161590576,
+                -0.9975767135620117,
+                -0.9872310161590576
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 33712,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 33712,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 190464,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 404544,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 404544,
+            "byteOffset" : 404544
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 269696,
+            "byteOffset" : 809088
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 380928,
+            "byteOffset" : 1078784
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1459712,
+            "uri" : "Glass Particle Sphere.bin"
+        }
+    ]
+}
