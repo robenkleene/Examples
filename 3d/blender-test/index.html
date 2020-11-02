@@ -45,7 +45,7 @@
 
       // Model
       var loader = new THREE.GLTFLoader();
-      loader.load("Glass Particle Sphere.gltf", function (gltf) {
+      loader.load("simple-sphere.gltf", function (gltf) {
         gltf.scene.scale.set(.1,.1,.1);
         scene.add(gltf.scene);
         renderer.render(scene, camera);
