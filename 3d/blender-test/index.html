@@ -9,6 +9,7 @@
         background-color: black;
       }
       canvas {
+        border: 10px solid red;
         display: block;
       }
     </style>
@@ -47,7 +48,7 @@
       // Model
       var loader = new THREE.GLTFLoader();
       loader.load("simple-sphere.gltf", function (gltf) {
-//         gltf.scene.scale.set(.1,.1,.1);
+        //         gltf.scene.scale.set(.1,.1,.1);
         scene.add(gltf.scene);
         renderer.render(scene, camera);
       });
@@ -58,12 +59,14 @@
       //}
       //animate();
 
-      function handleResize() {
+      window.addEventListener("resize", onWindowResize, false);
+      function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.updateProjectionMatrix();
+        // This works but can this be done without re-rendering?
+        // renderer.render(scene, camera);
       }
-      window.addEventListener("resize", handleResize, false);
     </script>
   </body>
 </html>
