@@ -18,6 +18,7 @@
 		4568BCE325F838FC0030EA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCE125F838FC0030EA62 /* Assets.xcassets */; };
 		4568BCE625F83A680030EA62 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCE525F83A680030EA62 /* Fire.sks */; };
 		4568BCE925F83A8B0030EA62 /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCE825F83A8B0030EA62 /* Smoke.sks */; };
+		4568BCEC25F83BB00030EA62 /* FireEdited.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCEB25F83BB00030EA62 /* FireEdited.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4568BCE125F838FC0030EA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4568BCE525F83A680030EA62 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 		4568BCE825F83A8B0030EA62 /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
+		4568BCEB25F83BB00030EA62 /* FireEdited.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireEdited.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				4568BCCE25F838190030EA62 /* Actions.sks */,
 				4568BCD025F838190030EA62 /* GameScene.swift */,
 				4568BCE525F83A680030EA62 /* Fire.sks */,
+				4568BCEB25F83BB00030EA62 /* FireEdited.sks */,
 				4568BCE825F83A8B0030EA62 /* Smoke.sks */,
 				4568BCD225F838190030EA62 /* GameViewController.swift */,
 				4568BCD425F838190030EA62 /* Main.storyboard */,
@@ -142,6 +145,7 @@
 				4568BCE625F83A680030EA62 /* Fire.sks in Resources */,
 				4568BCD625F838190030EA62 /* Main.storyboard in Resources */,
 				4568BCCD25F838190030EA62 /* GameScene.sks in Resources */,
+				4568BCEC25F83BB00030EA62 /* FireEdited.sks in Resources */,
 				4568BCD825F8381B0030EA62 /* Assets.xcassets in Resources */,
 				4568BCE225F838FC0030EA62 /* Rain.sks in Resources */,
 				4568BCE325F838FC0030EA62 /* Assets.xcassets in Resources */,
