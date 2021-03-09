@@ -14,6 +14,8 @@
 		4568BCD325F838190030EA62 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568BCD225F838190030EA62 /* GameViewController.swift */; };
 		4568BCD625F838190030EA62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCD425F838190030EA62 /* Main.storyboard */; };
 		4568BCD825F8381B0030EA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCD725F8381B0030EA62 /* Assets.xcassets */; };
+		4568BCE225F838FC0030EA62 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCE025F838FC0030EA62 /* Rain.sks */; };
+		4568BCE325F838FC0030EA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCE125F838FC0030EA62 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4568BCD525F838190030EA62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4568BCD725F8381B0030EA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4568BCD925F8381B0030EA62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4568BCE025F838FC0030EA62 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
+		4568BCE125F838FC0030EA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		4568BCBE25F838190030EA62 = {
 			isa = PBXGroup;
 			children = (
+				4568BCE025F838FC0030EA62 /* Rain.sks */,
+				4568BCE125F838FC0030EA62 /* Assets.xcassets */,
 				4568BCC925F838190030EA62 /* Particles */,
 				4568BCC825F838190030EA62 /* Products */,
 			);
@@ -130,6 +136,8 @@
 				4568BCD625F838190030EA62 /* Main.storyboard in Resources */,
 				4568BCCD25F838190030EA62 /* GameScene.sks in Resources */,
 				4568BCD825F8381B0030EA62 /* Assets.xcassets in Resources */,
+				4568BCE225F838FC0030EA62 /* Rain.sks in Resources */,
+				4568BCE325F838FC0030EA62 /* Assets.xcassets in Resources */,
 				4568BCCF25F838190030EA62 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
