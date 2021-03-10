@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqW-VN-CFC">
-                                <rect key="frame" x="180" y="434" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqW-VN-CFC">
+                                <rect key="frame" x="179.5" y="433" width="55" height="30"/>
                                 <state key="normal" title="Tap Me!"/>
                                 <connections>
                                     <action selector="showGreeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O6h-4K-X7a"/>
@@ -27,6 +26,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RqW-VN-CFC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LMr-cM-rwA"/>
+                            <constraint firstItem="RqW-VN-CFC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o8j-BG-msH"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="helloButton" destination="RqW-VN-CFC" id="uwL-UB-ZTg"/>
@@ -34,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93" y="89"/>
+            <point key="canvasLocation" x="-94.20289855072464" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
