@@ -11,6 +11,8 @@
 @interface ViewController () {
     Greeting greeting;
 }
+@property (weak, nonatomic) IBOutlet UIButton *helloButton;
+- (IBAction)showGreeting:(id)sender;
 @end
 
 @implementation ViewController
@@ -20,5 +22,10 @@
     // Do any additional setup after loading the view.
 }
 
+- (IBAction)showGreeting:(id)sender {
+    NSString *newTitle = [NSString stringWithCString:greeting.greet().c_str()
+                                         encoding:[NSString defaultCStringEncoding]];
+    [self.helloButton setTitle:newTitle forState:UIControlStateNormal];
+}
 
 @end
