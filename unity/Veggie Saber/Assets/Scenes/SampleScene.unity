@@ -155,6 +155,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &616016209
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1443276937}
+    m_Modifications:
+    - target: {fileID: 1936833763917624128, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_Name
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70441604
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.06162845
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.06162845
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70441604
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+--- !u!4 &616016210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3222991644305129811, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+  m_PrefabInstance: {fileID: 616016209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &616016211 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4769415439585946665, guid: d3e7b2d1abb775247a4b4b74c784d9eb, type: 3}
+  m_PrefabInstance: {fileID: 616016209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443276937}
   - component: {fileID: 1443276938}
+  - component: {fileID: 1443276939}
   m_Layer: 0
   m_Name: Hand R
   m_TagString: Untagged
@@ -377,7 +445,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 616016210}
   m_Father: {fileID: 267940507}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -399,3 +468,17 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
+--- !u!114 &1443276939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443276936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a176b023e03044cbfd19267c39b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HandType: 5
+  HandAnimator: {fileID: 616016211}
