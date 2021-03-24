@@ -130,6 +130,7 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: cff00a6e2f595441aa3ee1e70edf1330, type: 2}
   - {fileID: 827441091767925421, guid: 5ea3e631894c74182be3e33724bcee6d, type: 2}
   metroInputSource: 0
@@ -148,7 +149,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.DefaultCompany.VRSetup2020
   buildNumber:
     Standalone: 0
     iPhone: 0
