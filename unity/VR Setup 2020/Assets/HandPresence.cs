@@ -9,11 +9,11 @@ public class HandPresence : MonoBehaviour
     void Start()
     {
         List<InputDevice> devices = new List<InputDevice>();
-        InputDevice.getDevices(devices);
+        InputDevices.GetDevices(devices);
 
         foreach (var item in devices)
         {
-            Debug.Log(item.name + item.characteristics)
+            Debug.Log(item.name + item.characteristics);
         }
     }
 
