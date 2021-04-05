@@ -5,18 +5,22 @@ using UnityEngine.XR;
 
 public class HandPresence : MonoBehaviour
 {
+    private InputDevice targetDevice;
+
     // Start is called before the first frame update
     void Start()
     {
         List<InputDevice> devices = new List<InputDevice>();
-        InputDevices.GetDevices(devices);
-        // InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
-        // InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
+        InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
+        InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
 
         foreach (var item in devices)
         {
-            // Debug.Log(item.name + item.characteristics);
-            Debug.Log("My log device = " + item.name + item.characteristics);
+            Debug.Log(item.name + item.characteristics);
+        }
+
+        if (devices.Count > 0) {
+            targetDevice = devices[0];
         }
     }
 
