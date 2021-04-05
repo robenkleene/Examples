@@ -5,14 +5,18 @@ using UnityEngine.XR;
 
 public class HandPresence : MonoBehaviour
 {
+    public InputDeviceCharacteristics controllerCharacteristics;
+    public GameObject handModelPrefab;
     private InputDevice targetDevice;
+
+    private GameObject spawnedHandModel;
 
     // Start is called before the first frame update
     void Start()
     {
         List<InputDevice> devices = new List<InputDevice>();
-        InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
-        InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
+
+        InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
 
         foreach (var item in devices)
         {
@@ -22,11 +26,15 @@ public class HandPresence : MonoBehaviour
         if (devices.Count > 0) {
             targetDevice = devices[0];
         }
+
+        spawnedHandModel = Instantiate(handModelPrefab, transform);
     }
 
     // Update is called once per frame
     void Update()
     {
+        spawnedHandModel.SetActive(true);
+
         targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue);
         if (primaryButtonValue) {
             Debug.Log("Pressing primary button");
