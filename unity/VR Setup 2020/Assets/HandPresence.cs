@@ -10,10 +10,13 @@ public class HandPresence : MonoBehaviour
     {
         List<InputDevice> devices = new List<InputDevice>();
         InputDevices.GetDevices(devices);
+        // InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
+        // InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
 
         foreach (var item in devices)
         {
-            Debug.Log(item.name + item.characteristics);
+            // Debug.Log(item.name + item.characteristics);
+            Debug.Log("My log device = " + item.name + item.characteristics);
         }
     }
 
