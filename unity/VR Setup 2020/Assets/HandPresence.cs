@@ -42,12 +42,22 @@ public class HandPresence : MonoBehaviour
         {
             handAnimator.SetFloat("Trigger", 0);
         }
+
+        if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
+        {
+            handAnimator.SetFloat("Grip", gripValue);
+        }
+        else
+        {
+            handAnimator.SetFloat("Grip", 0);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         spawnedHandModel.SetActive(true);
+        UpdateHandAnimation();
 
         targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue);
         if (primaryButtonValue) {
