@@ -5623,6 +5623,7 @@ GameObject:
   - component: {fileID: 548365476}
   - component: {fileID: 548365479}
   - component: {fileID: 548365478}
+  - component: {fileID: 548365480}
   m_Layer: 0
   m_Name: VR Rig
   m_TagString: Untagged
@@ -5690,6 +5691,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XRRig: {fileID: 0}
+--- !u!114 &548365480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548365475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473fb993db8db477f9ac1fa9fbdb8fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftTeleportRay: {fileID: 283362388}
+  rightTeleportRay: {fileID: 2127087205}
+  teleportActivationButton: 2
+  activationThreshold: 0.1
 --- !u!1 &560226631
 GameObject:
   m_ObjectHideFlags: 0
