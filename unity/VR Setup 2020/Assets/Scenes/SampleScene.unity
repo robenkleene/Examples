@@ -5626,6 +5626,7 @@ GameObject:
   - component: {fileID: 548365480}
   - component: {fileID: 548365481}
   - component: {fileID: 548365482}
+  - component: {fileID: 548365483}
   m_Layer: 0
   m_Name: VR Rig
   m_TagString: Untagged
@@ -5727,6 +5728,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
+  additionalHeight: 0.2
 --- !u!143 &548365482
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5745,6 +5747,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &548365483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548365475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4f2c0214c9b494fa7eb5b8b2c02885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.2
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 1
+  m_TurnUsage: 0
+  m_Controllers:
+  - {fileID: 314334168}
+  m_DeadZone: 0.75
 --- !u!1 &560226631
 GameObject:
   m_ObjectHideFlags: 0
