@@ -5723,6 +5723,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   inputSource: 4
+  gravity: -9.81
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!143 &548365482
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5855,7 +5859,7 @@ GameObject:
   - component: {fileID: 644013345}
   - component: {fileID: 644013344}
   - component: {fileID: 644013343}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6126,7 +6130,7 @@ GameObject:
   - component: {fileID: 806128200}
   - component: {fileID: 806128199}
   - component: {fileID: 806128198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11883,7 +11887,7 @@ GameObject:
   - component: {fileID: 2049636915}
   - component: {fileID: 2049636914}
   - component: {fileID: 2049636913}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
